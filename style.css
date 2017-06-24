@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300');
+  
+
+body{
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin:0px;
+}
+
+.head{
+    
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('./images/student.jpg');
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    
+}
+
+#heading{
+    
+    margin-top: 180px;
+    color:white;
+    text-transform: uppercase;
+    font-family:"Roboto",sans-serif;
+    font-weight: 200;
+}
+
+#sub-text{
+    
+    color:white;
+    font-family:"Roboto",sans-serif;
+    font-weight: 300;
+}
+
+#gplay{
+    
+    margin-top: 130px;
+    margin-left: 36%;
+}
+
+/* #gplay a{
+    
+    border:1px solid white;
+    font-size: 18px;
+    transition: all 0.6s;
+    color: white;
+}   */
+
+#gplay a:hover{
+    
+    background-color: white;
+    
+    color:black;
+}
+
+.description{
+    
+    margin-bottom: 80px;
+}
+
+.feature h2{
+    
+    text-transform: uppercase;
+    font-family:"Roboto",sans-serif;
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.feature h2:after{
+    
+    position: absolute;
+    content: "";
+    height: 2px;
+    width:90px;
+    background-color: mediumpurple;
+    margin-left: -114px;
+    margin-top: 40px;
+    
+}
+
+#appFeat{
+    
+    margin-top: 70px;
+}
+
+#phon{
+    
+   margin-left: 30%;
+    
+}
+
+.step{
+   
+   margin-top: 50px;     
+}
+
+#badg1{
+    
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+#badg2{
+    
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+/*.step div{
+    
+    display: inline-block;
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #576670;
+    color:#fff;
+}  */
+
+.step p{
+    
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: "Roboto",sans-serif;
+}
+
+.play img{
+    
+      margin-top: 60px;
+      margin-left: 30%;
+}
+
+#contact{
+    
+    height:450px;
+    background-image: url(./images/contBack.jpg);
+    padding-top: 1px;
+    margin-top: -1px;
+}
+
+#contact-header{
+    
+    color:#fff;
+    font-family: "Roboto",sans-serif;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+#name{
+
+     border-color: white;
+     background: transparent;
+     margin-top: 35px;
+     color: white;
+}
+
+#email{
+
+     border-color: white;
+     background: transparent;
+     margin-top: 30px;
+     color: white;
+}
+
+#message{
+
+     border-color: white;
+     background: transparent;
+     margin-top: 30px;
+     height:100px;
+     color: white;
+}
+
+#submit{
+    
+    float: right;
+    margin-top: 20px;
+    background: crimson;
+    color: #fff;
+    border: 1px solid crimson;
+    
+}
+
+#rslt{
+
+    margin-top:20px;	
+    font-size: 20px;
+}
+
+#error_msg{
+
+    margin-top:20px;	
+    font-size: 20px;
+}
+
+#foot{
+    
+    height: 120px;
+    background-image:url("./images/shapes.png");
+}
+
+#footLogo{
+    
+    margin-top: 30px;
+    
+}
+
+#copy{
+    
+    color:#a6a6a6;
+    margin-top: 20px;
+    
+}
