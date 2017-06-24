@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+  <html lang="en">
+ 
+    <head>
+      
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <title>Bookscomet | for the students.by the students</title>
+        
+      
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script src="js/jquery.fadethis.min.js"></script>
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        
+        <script src="js/cascade-min.js"></script>
+        
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/cascade.min.css">         
+        
+    <script>
+    
+        $(document).ready(function(){
+            
+              $(window).fadeThis();   
+              
+            $("#submit").click(function(e){
+                
+				e.preventDefault();
+               var name = $("#name").val();
+               var email = $("#email").val();
+               var message = $("#message").val();    
+			   
+			   if(name == ''){
+				  
+				   $("#error_msg").html('Please enter name.').show().delay(2000).fadeOut(400);
+			   }
+			   else if(email == ''){
+				   
+				   $("#error_msg").html('Please enter email.').show().delay(2000).fadeOut(400);
+			   }
+			   else if(message == ''){
+				   
+				   $("#error_msg").html('Please enter message.').show().delay(2000).fadeOut(400);
+			   }   
+			 
+               else{
+                   
+					 $("#error_msg").html('');
+               $.ajax({
+                
+                   url:"contact.php",
+                   data:{nam:name,mail:email,msg:message},
+                   type:"POST",
+                   success:function(data){
+                       
+					   $("#rslt").html(data).show().delay(2000).fadeOut(400);
+					   $("#name").val('');
+					   $("#email").val('');
+					   $("#message").val('');
+                   }
+                   
+               });    
+			   
+				 }
+             
+            });
+          
+           });
+        
+         function Scroll(){
+             
+             var y = window.pageYOffset;
+             var andr = document.getElementById('andr');
+             var steps = document.getElementById('steps');
+             
+             if(y>450){
+                 
+                   andr.style.opacity = "1";
+                   andr.style.transition = "all 2s";
+                   steps.style.opacity = "1";
+                   steps.style.transition = "all 2s";    
+                 
+                 //Code for Safari
+                 andr.style.WebkitTransition = "all 2s";   
+             } 
+             else{
+                 
+                 andr.style.opacity = "0";
+                 andr.style.transition = "all 0.7s";  
+                 steps.style.opacity = "0";
+                 steps.style.transition = "all 0.7s"; 
+             }
+             
+         }
+        
+        window.addEventListener("scroll",Scroll);   
+        
+        var element = document.getElementsByClassName('cascade-container')[0];
+  var cascade = new Cascade(element);
+  cascade.flow();
+        
+    </script>    
+        
+    </head>    
+
+    <body>
+      
+      <header class="head">
+        
+        <nav class="navbar navbar-custom">
+            
+            <div class="container">
+                
+                <div class="navbar-header">
+                
+                <a class="navbar-brand"><img src="images/logoWhite.png"></a>
+                
+                </div>
+            
+            </div>
+          
+        </nav>
+          
+        <div class="row" >
+          
+            <div class="col-md-12 text-center">
+            
+             <h1 id="heading" class="slide-left">Now, discovering books are just a tap away</h1>
+            
+             <p id="sub-text" class="cascade-container">Sharing books in your vicinity has never been easier before</p>    
+            
+            </div>
+          
+        </div>  
+          
+        <div class="row">
+          
+          <div id="gplay" class="col-md-12 text-center">
+           <!-- <a class="btn" href="https://rpxm.app.link/ylD0ifLBHD
+" target="_blank">GET APP LINK ON PHONE</a>  -->
+              <div  data-widget data-app="uzokypo8e7e8ari2a9a4" data-mode="onboarding"></div>
+<script src="//cdn.ringcaptcha.com/widget/v2/bundle.min.js"></script>
+             
+          </div>
+        
+        </div>  
+          
+     </header>
+        
+     
+     <section class="description">
+     
+         <div class="container">
+             
+             <div class="feature text-center">
+               <h2>Features</h2> 
+             </div>
+             
+              <div id="appFeat" class="row">
+             
+                <div class="col-md-6">
+                    <div id="phon">
+                  <img id="andr" width="230" src="images/nexus.png">
+                    </div>        
+                </div>
+                  
+                 <div class="col-md-6">
+                  
+                     <div class="step" id="steps">
+                        
+                         <div id="badg1"><img src="images/notebook.png" width="60px"></div>
+                         <p>Simply post your books and get discovered by thousands of students.</p>
+                         
+                         <div id="badg2"><img src="images/locat.png" width="60px"></div>
+                         <p class="text-center">Find and share books  around you in a real quick.</p>
+                         
+                        <div class="play">
+                             
+                             <img src="images/googlePlay.png">
+                         
+                         </div> 
+                         
+                     </div>
+                
+                 </div>  
+             
+             </div>         
+         
+         </div>
+         
+     </section>    
+        
+     <section id="contact">
+     
+         <div id="contact-header">
+         <h1  class="text-center">Drop us a line...</h1>
+         </div>
+         
+         <div class="row">
+            <div class="col-md-3"></div>
+             
+             <div class="col-md-6 slide-right" >
+                  <form>
+                    <input type="text" id="name" class="form-control" placeholder="Name" required>
+                    <input type="email" id="email" class="form-control" placeholder="Email" required>
+                      <textarea rows="5" id="message" class="form-control" required></textarea>
+                      <button  class="btn btn-default" id="submit">SEND MESSAGE</button>
+                      <div id="error_msg" class="text-danger"></div>
+                      <div id="rslt" class="text-success"></div>
+                      
+                </form>
+                 
+                 
+              </div>
+             
+             <div class='col-md-3'></div>
+         </div>     
+     
+     </section>    
+        
+     <footer id="foot">
+         
+         <div class="cont text-center">
+         
+             <img class="slide-up" id="footLogo" src="images/log.png">
+             <p id="copy">&copy Copyright 2017. All right reserved</p>
+        
+         </div>         
+     
+    </footer>       
+        
+    </body>
+      
+  </html>
